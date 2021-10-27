@@ -19,8 +19,8 @@ import com.bawp.movieapp.navagation.MovieScreens
 @Composable
 fun HomeScreen(navController: NavController) {
     Scaffold(topBar = {
-        TopAppBar(backgroundColor = Color.Magenta,
-            elevation = 5.dp) {
+        TopAppBar(backgroundColor = Color.Transparent,
+            elevation = 0.dp) {
             Text(text = "Movies")
 
         }
@@ -53,9 +53,7 @@ fun MainContent(
         LazyColumn {
             items(items = movieList) {
                 MovieRow(movie = it){ movie ->
-                    navController.navigate(route = MovieScreens.DetailsScreen.name)
-
-                    //Log.d("TAG", "MainContent: $movie")
+                    navController.navigate(route = MovieScreens.DetailsScreen.name+"/$movie")
 
                 }
             }
