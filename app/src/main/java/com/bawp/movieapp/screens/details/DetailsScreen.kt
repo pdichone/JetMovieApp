@@ -49,6 +49,7 @@ fun DetailsScreen(navController: NavController,
             .fillMaxWidth()) {
      Column(horizontalAlignment = Alignment.CenterHorizontally,
            verticalArrangement = Arrangement.Top) {
+
          MovieRow(movie = newMovieList.first())
          Spacer(modifier = Modifier.height(8.dp))
          Divider()
